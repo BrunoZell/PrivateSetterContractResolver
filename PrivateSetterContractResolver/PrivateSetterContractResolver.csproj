@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageTags>json json.net newtonsoft contract-resolver</PackageTags>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Description>Provides a JSON.Net contract resolver to (de-)serialize models with private setters or getter-only auto properties.</Description>
+    <Copyright>Bruno Zell</Copyright>
+    <PackageLicenseUrl>https://github.com/TheInsaneBro/PrivateSetterContractResolver/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TheInsaneBro/PrivateSetterContractResolver</RepositoryUrl>
+    <Authors>Bruno Zell</Authors>
+    <Company />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>
