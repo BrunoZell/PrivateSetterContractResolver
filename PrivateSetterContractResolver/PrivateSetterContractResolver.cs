@@ -17,8 +17,6 @@ namespace Newtonsoft.Json.Serialization {
     /// </para>
     /// </summary>
     public class PrivateSetterContractResolver : CamelCasePropertyNamesContractResolver {
-        public PrivateSetterContractResolver() { }
-
         protected override JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization) {
             var jProperty = base.CreateProperty(member, memberSerialization);
             if (!(member is PropertyInfo property) || jProperty.IsModifiable()) {
@@ -39,7 +37,7 @@ namespace Newtonsoft.Json.Serialization {
             var backingField = property.DeclaringType.GetField($"<{property.Name}>k__BackingField", BindingFlags.NonPublic | BindingFlags.Instance);
 
             // Test if backing field is there or if it is compiler generated
-            if (backingField != null && backingField.IsDefined(typeof(CompilerGeneratedAttribute), true)) {
+            if (backingField?.IsDefined(typeof(CompilerGeneratedAttribute), true) == true) {
                 // Backing field okay, return the backing field serialization info
                 return FromBackingField(jProperty, property, backingField);
             }
@@ -53,9 +51,7 @@ namespace Newtonsoft.Json.Serialization {
             var contract = base.CreateContract(objectType);
 
             // Skip all initialization
-            contract.DefaultCreator = () => {
-                return FormatterServices.GetUninitializedObject(objectType);
-            };
+            contract.DefaultCreator = () => FormatterServices.GetUninitializedObject(objectType);
 
             return contract;
         }
