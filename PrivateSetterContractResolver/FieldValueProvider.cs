@@ -4,7 +4,7 @@ namespace Newtonsoft.Json.Serialization {
     /// <summary>
     /// Value provider for reflected fields
     /// </summary>
-    class FieldValueProvider : IValueProvider {
+    internal class FieldValueProvider : IValueProvider {
         private readonly FieldInfo _fieldInfo;
 
         public FieldValueProvider(FieldInfo fieldInfo) {

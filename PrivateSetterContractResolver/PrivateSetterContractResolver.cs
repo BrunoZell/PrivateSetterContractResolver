@@ -1,5 +1,6 @@
 ﻿using PrivateSetterContractResolver;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -50,8 +51,11 @@ namespace Newtonsoft.Json.Serialization {
         protected override JsonContract CreateContract(Type objectType) {
             var contract = base.CreateContract(objectType);
 
-            // Skip all initialization
-            contract.DefaultCreator = () => FormatterServices.GetUninitializedObject(objectType);
+            // Json.Net handles dictionary and enumerable types different so that it needs initialization
+            if (!objectType.IsDictionaryType() && !typeof(IEnumerable).IsAssignableFrom(objectType)) {
+                // Skip all initialization
+                contract.DefaultCreator = () => FormatterServices.GetUninitializedObject(objectType);
+            }
 
             return contract;
         }

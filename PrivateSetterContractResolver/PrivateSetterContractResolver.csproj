@@ -1,23 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>net35;netcoreapp2.0;netstandard2.0</TargetFrameworks>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageTags>json json.net newtonsoft contract-resolver</PackageTags>
-    <PackageReleaseNotes></PackageReleaseNotes>
-    <Description>Provides a JSON.Net contract resolver to (de-)serialize models with private setters or getter-only auto properties.</Description>
-    <Copyright>Bruno Zell</Copyright>
-    <PackageLicenseUrl>https://github.com/TheInsaneBro/PrivateSetterContractResolver/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl></PackageProjectUrl>
-    <RepositoryUrl>https://github.com/TheInsaneBro/PrivateSetterContractResolver</RepositoryUrl>
-    <Authors>Bruno Zell</Authors>
-    <Company />
-    <Version>1.0.1</Version>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFrameworks>net35;netcoreapp2.0;netstandard2.0</TargetFrameworks>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageTags>json json.net newtonsoft contract-resolver</PackageTags>
+        <PackageReleaseNotes></PackageReleaseNotes>
+        <Description>Provides a JSON.Net contract resolver to (de-)serialize models with private setters or getter-only auto properties.</Description>
+        <Copyright>Bruno Zell</Copyright>
+        <PackageLicenseUrl>https://github.com/TheInsaneBro/PrivateSetterContractResolver/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageProjectUrl></PackageProjectUrl>
+        <RepositoryUrl>https://github.com/TheInsaneBro/PrivateSetterContractResolver</RepositoryUrl>
+        <Authors>Bruno Zell</Authors>
+        <Company />
+        <Version>1.0.1</Version>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    </ItemGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'netcoreapp2.0'">
+        <DefineConstants>HAVE_READ_ONLY_COLLECTIONS</DefineConstants>
+    </PropertyGroup>
 
 </Project>
