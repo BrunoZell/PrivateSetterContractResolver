@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PrivateSetterContractResolver.Tests.Models
-{
+﻿namespace PrivateSetterContractResolver.Tests.Models {
     class DerivedPrivateProperties : BasePrivateProperties
     {
         public DerivedPrivateProperties(string notDerived, string getterSetter, string getterOnly)
