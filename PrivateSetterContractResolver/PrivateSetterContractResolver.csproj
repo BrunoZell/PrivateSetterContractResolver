@@ -13,7 +13,7 @@
         <RepositoryUrl>https://github.com/TheInsaneBro/PrivateSetterContractResolver</RepositoryUrl>
         <Authors>Bruno Zell</Authors>
         <Company />
-        <Version>1.0.1</Version>
+        <Version>1.0.2</Version>
     </PropertyGroup>
 
     <ItemGroup>
