@@ -8,9 +8,9 @@
         <PackageReleaseNotes></PackageReleaseNotes>
         <Description>Provides a JSON.Net contract resolver to (de-)serialize models with private setters or getter-only auto properties.</Description>
         <Copyright>Bruno Zell</Copyright>
-        <PackageLicenseUrl>https://github.com/TheInsaneBro/PrivateSetterContractResolver/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageLicenseUrl>https://github.com/TheInsaneBro/Newtonsoft.Json.Serialization.PrivateSetterContractResolver/blob/master/LICENSE</PackageLicenseUrl>
         <PackageProjectUrl></PackageProjectUrl>
-        <RepositoryUrl>https://github.com/TheInsaneBro/PrivateSetterContractResolver</RepositoryUrl>
+        <RepositoryUrl>https://github.com/TheInsaneBro/Newtonsoft.Json.Serialization.PrivateSetterContractResolver</RepositoryUrl>
         <Authors>Bruno Zell</Authors>
         <Version>2.0.0</Version>
         <PackageId>PrivateSetterContractResolver</PackageId>
