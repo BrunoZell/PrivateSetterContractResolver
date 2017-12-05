@@ -17,7 +17,7 @@ namespace Newtonsoft.Json.Serialization
     /// - getter-only auto-properties
     /// </para>
     /// </summary>
-    public class PrivateSetterContractResolver : CamelCasePropertyNamesContractResolver
+    public class PrivateSetterContractResolver : DefaultContractResolver
     {
         protected override JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization)
         {
