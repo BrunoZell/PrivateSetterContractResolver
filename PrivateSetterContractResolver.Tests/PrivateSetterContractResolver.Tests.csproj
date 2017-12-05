@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PrivateSetterContractResolver\Newtonsoft.Json.Serialization.PrivateSetterContractResolver.csproj" />
+    <ProjectReference Include="..\PrivateSetterContractResolver\PrivateSetterContractResolver.csproj" />
   </ItemGroup>
 
 </Project>
