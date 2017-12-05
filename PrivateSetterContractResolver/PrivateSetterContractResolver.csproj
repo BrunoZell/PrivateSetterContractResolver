@@ -12,13 +12,13 @@
         <PackageProjectUrl></PackageProjectUrl>
         <RepositoryUrl>https://github.com/TheInsaneBro/Newtonsoft.Json.Serialization.PrivateSetterContractResolver</RepositoryUrl>
         <Authors>Bruno Zell</Authors>
-        <Version>2.0.0</Version>
+        <Version>2.1.0</Version>
         <PackageId>PrivateSetterContractResolver</PackageId>
         <Product>Newtonsoft.Json.Serialization.PrivateSetterContractResolver</Product>
         <AssemblyName>Newtonsoft.Json.Serialization.PrivateSetterContractResolver</AssemblyName>
         <RootNamespace>Newtonsoft.Json.Serialization.PrivateSetterContractResolver</RootNamespace>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <FileVersion>2.0.0.0</FileVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <FileVersion>2.1.0.0</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
