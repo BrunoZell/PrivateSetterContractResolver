@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrivateSetterContractResolver", "PrivateSetterContractResolver\PrivateSetterContractResolver.csproj", "{A49FE8E3-CE55-4385-821D-3D1BE2C3B0CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Newtonsoft.Json.Serialization.PrivateSetterContractResolver", "PrivateSetterContractResolver\Newtonsoft.Json.Serialization.PrivateSetterContractResolver.csproj", "{A49FE8E3-CE55-4385-821D-3D1BE2C3B0CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrivateSetterContractResolver.Tests", "PrivateSetterContractResolver.Tests\PrivateSetterContractResolver.Tests.csproj", "{8D74D585-E8D7-46C6-B313-9617AA9590C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrivateSetterContractResolver.Tests", "PrivateSetterContractResolver.Tests\PrivateSetterContractResolver.Tests.csproj", "{8D74D585-E8D7-46C6-B313-9617AA9590C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
