@@ -1,5 +1,4 @@
-﻿using PrivateSetterContractResolver;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +6,8 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 
-namespace Newtonsoft.Json.Serialization {
+namespace Newtonsoft.Json.Serialization
+{
     /// <summary>
     /// This contract resolver will serialize and deserialize:
     /// <para>
@@ -17,8 +17,10 @@ namespace Newtonsoft.Json.Serialization {
     /// - getter-only auto-properties
     /// </para>
     /// </summary>
-    public class PrivateSetterContractResolver : CamelCasePropertyNamesContractResolver {
-        protected override JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization) {
+    public class PrivateSetterContractResolver : CamelCasePropertyNamesContractResolver
+    {
+        protected override JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization)
+        {
             var jProperty = base.CreateProperty(member, memberSerialization);
             if (!(member is PropertyInfo property) || jProperty.IsModifiable()) {
                 // Not a property or writeable and readable by default, use default behaviour
@@ -48,7 +50,8 @@ namespace Newtonsoft.Json.Serialization {
             return jProperty;
         }
 
-        protected override JsonContract CreateContract(Type objectType) {
+        protected override JsonContract CreateContract(Type objectType)
+        {
             var contract = base.CreateContract(objectType);
 
             // Json.Net handles dictionary and enumerable types different so that it needs initialization
@@ -60,11 +63,13 @@ namespace Newtonsoft.Json.Serialization {
             return contract;
         }
 
-        protected override List<MemberInfo> GetSerializableMembers(Type objectType) {
+        protected override List<MemberInfo> GetSerializableMembers(Type objectType)
+        {
             return objectType.GetAllPropertiesRecursive().Select(p => p as MemberInfo).ToList();
         }
 
-        private static JsonProperty FromBackingField(JsonProperty originalProperty, PropertyInfo property, FieldInfo field) {
+        private static JsonProperty FromBackingField(JsonProperty originalProperty, PropertyInfo property, FieldInfo field)
+        {
             return new JsonProperty() {
                 DeclaringType = property.DeclaringType,
                 PropertyType = property.PropertyType,

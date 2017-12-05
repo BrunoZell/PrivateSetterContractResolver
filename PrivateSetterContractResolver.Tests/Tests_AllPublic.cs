@@ -2,10 +2,13 @@
 using PrivateSetterContractResolver.Tests.Models;
 using Xunit;
 
-namespace PrivateSetterContractResolver.Tests {
-    public class Tests_AllPublic : Tests {
+namespace PrivateSetterContractResolver.Tests
+{
+    public class Tests_AllPublic : Tests
+    {
         [Fact]
-        public void Serialization() {
+        public void Serialization()
+        {
             var model = new AllPublic() {
                 Number = 1,
                 String = "Text"
@@ -18,7 +21,8 @@ namespace PrivateSetterContractResolver.Tests {
         }
 
         [Fact]
-        public void Deserialization() {
+        public void Deserialization()
+        {
             const string serialized = @"{""number"":1,""string"":""Text""}";
 
             var model = JsonConvert.DeserializeObject<AllPublic>(serialized, Settings);

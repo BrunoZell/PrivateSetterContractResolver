@@ -12,7 +12,8 @@ namespace PrivateSetterContractResolver.Tests
     public class Tests_DerivedPrivateProperties : Tests
     {
         [Fact]
-        public void Serialization() {
+        public void Serialization()
+        {
             var model = new DerivedPrivateProperties("NotDerived", "GetterSetter", "GetterOnly");
 
             string serialized = JsonConvert.SerializeObject(model, Settings);
@@ -22,7 +23,8 @@ namespace PrivateSetterContractResolver.Tests
         }
 
         [Fact]
-        public void Deserialization() {
+        public void Deserialization()
+        {
             const string serialized = @"{""notDerived"":""NotDerived"",""getterSetter"":""GetterSetter"",""getterOnly"":""GetterOnly""}";
 
             var model = JsonConvert.DeserializeObject<DerivedPrivateProperties>(serialized, Settings);

@@ -1,9 +1,11 @@
-﻿using Newtonsoft.Json.Serialization;
-using System;
+﻿using System;
 
-namespace PrivateSetterContractResolver {
-    static class JsonPropertyExtensions {
-        public static bool IsModifiable(this JsonProperty jsonProperty) {
+namespace Newtonsoft.Json.Serialization
+{
+    internal static class JsonPropertyExtensions
+    {
+        public static bool IsModifiable(this JsonProperty jsonProperty)
+        {
             if (jsonProperty == null) {
                 throw new ArgumentNullException(nameof(jsonProperty));
             }

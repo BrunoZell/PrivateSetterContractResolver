@@ -1,6 +1,9 @@
-﻿namespace PrivateSetterContractResolver.Tests.Models {
-    public class AllPublic {
-        public AllPublic() {
+﻿namespace PrivateSetterContractResolver.Tests.Models
+{
+    public class AllPublic
+    {
+        public AllPublic()
+        {
 
         }
 

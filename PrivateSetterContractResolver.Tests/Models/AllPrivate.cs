@@ -1,10 +1,14 @@
-﻿namespace PrivateSetterContractResolver.Tests.Models {
-    public class AllPrivate {
-        public AllPrivate() {
+﻿namespace PrivateSetterContractResolver.Tests.Models
+{
+    public class AllPrivate
+    {
+        public AllPrivate()
+        {
 
         }
 
-        public AllPrivate(int number, string @string) {
+        public AllPrivate(int number, string @string)
+        {
             Number = number;
             String = @string;
         }

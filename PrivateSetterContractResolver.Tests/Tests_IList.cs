@@ -3,10 +3,13 @@ using PrivateSetterContractResolver.Tests.Models;
 using System.Collections.Generic;
 using Xunit;
 
-namespace PrivateSetterContractResolver.Tests {
-    public class Tests_IList : Tests {
+namespace PrivateSetterContractResolver.Tests
+{
+    public class Tests_IList : Tests
+    {
         [Fact]
-        public void Serialization() {
+        public void Serialization()
+        {
             var model = new PublicIList() {
                 List = new List<string>() {
                     "value1",
@@ -21,7 +24,8 @@ namespace PrivateSetterContractResolver.Tests {
         }
 
         [Fact]
-        public void Deserialization() {
+        public void Deserialization()
+        {
             const string serialized = @"{""list"":[""value1"",""value2""]}";
 
             var model = JsonConvert.DeserializeObject<PublicIList>(serialized, Settings);

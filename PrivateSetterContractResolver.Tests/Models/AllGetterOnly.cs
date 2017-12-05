@@ -1,10 +1,14 @@
-﻿namespace PrivateSetterContractResolver.Tests.Models {
-    public class AllGetterOnly {
-        public AllGetterOnly() {
+﻿namespace PrivateSetterContractResolver.Tests.Models
+{
+    public class AllGetterOnly
+    {
+        public AllGetterOnly()
+        {
 
         }
 
-        public AllGetterOnly(int number, string @string) {
+        public AllGetterOnly(int number, string @string)
+        {
             Number = number;
             String = @string;
         }

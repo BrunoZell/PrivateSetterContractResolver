@@ -1,21 +1,26 @@
 ﻿using System.Reflection;
 
-namespace Newtonsoft.Json.Serialization {
+namespace Newtonsoft.Json.Serialization
+{
     /// <summary>
     /// Value provider for reflected fields
     /// </summary>
-    internal class FieldValueProvider : IValueProvider {
+    internal class FieldValueProvider : IValueProvider
+    {
         private readonly FieldInfo _fieldInfo;
 
-        public FieldValueProvider(FieldInfo fieldInfo) {
+        public FieldValueProvider(FieldInfo fieldInfo)
+        {
             _fieldInfo = fieldInfo;
         }
 
-        public object GetValue(object target) {
+        public object GetValue(object target)
+        {
             return _fieldInfo.GetValue(target);
         }
 
-        public void SetValue(object target, object value) {
+        public void SetValue(object target, object value)
+        {
             _fieldInfo.SetValue(target, value);
         }
     }

@@ -3,10 +3,13 @@ using PrivateSetterContractResolver.Tests.Models;
 using System.Collections.Generic;
 using Xunit;
 
-namespace PrivateSetterContractResolver.Tests {
-    public class Tests_IDictionary : Tests {
+namespace PrivateSetterContractResolver.Tests
+{
+    public class Tests_IDictionary : Tests
+    {
         [Fact]
-        public void Serialization() {
+        public void Serialization()
+        {
             var model = new PublicIDictionary() {
                 Dictionary = new Dictionary<string, string>() {
                     { "key1", "value1" },
@@ -21,7 +24,8 @@ namespace PrivateSetterContractResolver.Tests {
         }
 
         [Fact]
-        public void Deserialization() {
+        public void Deserialization()
+        {
             const string serialized = @"{""dictionary"":{""key1"":""value1"",""key2"":""value2""}}";
 
             var model = JsonConvert.DeserializeObject<PublicIDictionary>(serialized, Settings);
