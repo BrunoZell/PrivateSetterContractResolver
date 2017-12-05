@@ -74,7 +74,7 @@ namespace Newtonsoft.Json.Serialization
                 DeclaringType = property.DeclaringType,
                 PropertyType = property.PropertyType,
                 PropertyName = originalProperty.PropertyName,
-                ValueProvider = new FieldValueProvider(field),
+                ValueProvider = new ReflectionValueProvider(field),
                 Readable = true,
                 Writable = true,
             };
